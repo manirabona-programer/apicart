@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::resource('/clients', 'App\Http\Controllers\ClientController');
+Route::resource('/orders', 'App\Http\Controllers\OrderController');
+Route::resource('/products', 'App\Http\Controllers\ProductController');

@@ -5,13 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Client extends Model
+class Product extends Model
 {
     use HasFactory;
 
     public function order(){
         return $this->belongsToMany(Order::class);
     }
-
-    protected $hidden = ['id'];
 }

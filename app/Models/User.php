@@ -41,4 +41,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function isManager(){
+        return is_array(Role::IS_MANAGER, $this->roles()->plunk('id')->toArray());
+    }
 }
